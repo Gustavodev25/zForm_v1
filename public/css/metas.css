@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+html {
+    background-color: #142534;
+}
+
+.containerdashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.4s ease;
+}
+
+.sidebar {
+    width: 17%;
+    height: 100vh;
+    background-color: #172A38;
+    padding: 15px;
+    transition: all 0.4s ease;
+    color: white;
+}
+
+.top-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.body-sidebar {
+    margin-top: 20px;
+    transition: all 0.4s ease;
+}
+
+li {
+    padding: 15px;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    margin-top: 10px;
+}
+
+li:hover {
+    background-color: #03c98765;
+    transition: all 0.4s ease;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    transition: all 0.4s ease;
+    font-size: 18px;
+}
+
+svg {
+    margin-right: 5px;
+    transition: all 0.4s ease;
+}
+
+.sidebar-minimized {
+    width: 5%;
+}
+
+.sidebar-minimized .top-sidebar {
+    justify-content: center;
+}
+
+.sidebar-minimized .top-sidebar h1 {
+    display: none;
+}
+
+.sidebar-minimized .body-sidebar {
+    display: block;
+}
+
+.sidebar-minimized .body-sidebar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section-minimized {
+    margin-left: 60px;
+    transition: margin-left 0.4s ease;
+}
+
+.mainsection {
+    width: 100%;
+    height: 100vh;
+    padding: 25px;
+}
+
+.mainsection {
+    color: white;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button-section {
+    width: 10%;
+}
+
+.button-section button {
+    width: 100%;
+    background-color: #186F65;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    margin-top: 10px;
+    border: none;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.progress-bar {
+    background-color: #142534;
+    border: transparent;
+    margin-top: 15px;
+    border-radius: 5px;
+    height: 2em;
+}
+
+.progress {
+    height: 100%;
+    background-color: #186F65;
+}
+
+.card-meta {
+    background-color: #172A38;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.topcardmeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bodycard {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.bodycard svg {
+    margin-top: 5px;
+}
+
+.card-meta {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-meta.active {
+    border: 2px solid transparent; /* Define a largura inicial da borda e torna-a transparente */
+    animation: borderPulse 2s infinite alternate;
+    border-radius: 5px;
+}
+
+@keyframes borderPulse {
+    0% {
+        box-shadow: 0 0 10px #186F65; /* Sombra com opacidade */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 87, 51, 0); /* Sombra sem opacidade */
+    }
+}
+
+
+
+
+.cardcontainer{
+    margin-top: 20px;
+    padding: 1px;
+    border-radius: 5px;
+}
